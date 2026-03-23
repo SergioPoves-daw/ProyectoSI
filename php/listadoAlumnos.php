@@ -48,6 +48,4 @@
 	   
     echo '</p>';
   }
-
-  mostrar_alumnos();
 ?>
