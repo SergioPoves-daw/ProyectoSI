@@ -46,7 +46,8 @@
     </nav>
     <main>
         <br>
-        <form method="GET" action="./php/mostrarJesuitas.php" id="formAgradecer">
+        <!-- Enviar muestra el listado de alumnos (3) -->
+        <form method="GET" action="php/listadoAlumnos.php" id="formAgradecer">
             <p>Para</p>
             <select name="destinatario">
                 <?php mostrar_jesuitas(); ?>

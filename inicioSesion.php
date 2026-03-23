@@ -42,5 +42,7 @@
         echo 'Inicio de sesión incorrecto';
     }
 
+    $conexion->close();
+
     // Guardar info del usuario en sesiones: $_SESSION['id'] = $fila["idAlumno"];
 ?>
