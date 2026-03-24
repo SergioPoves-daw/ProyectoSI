@@ -16,7 +16,7 @@
     $nombre = $_POST["nombre"];
     $password = $_POST["password"];
 
-    // Comprobar que la informacion sea correcta en la BD
+    // Recoger idAlumno si al comprobar la informacion, esta es correcta en la BD
     $sql = 'SELECT idAlumno FROM alumnos WHERE
         nombre="' . $nombre . '" AND pwd="' . $password . '";';
 
@@ -29,12 +29,15 @@
     $resultado = $conexion->query($sql);
 
     // num_rows devuelve 1 si los datos son iguales/existentes, 0 si son diferentes/inexistentes
+    // Si el SELECT con WHERE ha encontrado una fila, sería 1
+    // Si el SELECT con WHERE no coincide en alguno de los datos y no encuentra ninguna fila, sería 0
     if ($resultado->num_rows > 0) {
         // Si los datos introducidos son iguales al SELECT de la fila, entonces es exitoso
         echo 'Inicio de sesión exitoso';
         
-        // $fila = $resultado->fetch_assoc();
-        // $_SESSION['idAlumno'] = $fila["idAlumno"];
+        $fila = $resultado->fetch_array();
+        $_SESSION['alumno'] = $fila['idAlumno'];
+        echo '<p>Hola Alumno ' . $_SESSION['alumno'] . '</p>';
     }
     
     // Si no, entonces los datos son incorrectos.
