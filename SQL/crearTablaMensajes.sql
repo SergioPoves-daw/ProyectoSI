@@ -5,5 +5,6 @@ CREATE TABLE mensajes (
 	idReceptor TINYINT UNSIGNED,
 	FOREIGN KEY (idEmisor) REFERENCES alumnos(idAlumno),
 	FOREIGN KEY (idReceptor) REFERENCES alumnos(idAlumno),
-	CONSTRAINT UQEmisorReceptor UNIQUE (idEmisor, idReceptor)
+	CONSTRAINT UQEmisorReceptor UNIQUE (idEmisor, idReceptor),
+	CONSTRAINT CHEmisorNoEmisor CHECK (idEmisor != idReceptor)
 );
