@@ -40,21 +40,21 @@
         <h1>AGRADECE EN COMPAÑÍA</h1>
     </header>
     <nav>
-        <a href="./agradecer.html" style="background-color: rgb(255, 250, 191);">Agradecer</a>
+        <a href="./agradecer.php" style="background-color: rgb(255, 250, 191);">Agradecer</a>
         <a href="./recibirAgradecimiento.html">Recibir</a>
-        <a href="./index.html">Cerrar Sesión</a>
+        <a href="./cerrarSesion.php">Cerrar Sesión</a>
     </nav>
     <main>
         <br>
         <!-- Enviar muestra el listado de alumnos -->
-        <form method="GET" action="php/listadoAlumnos.php" id="formAgradecer">
+        <form method="POST" action="mensaje.php" id="formAgradecer">
             <p>Para</p>
             <select name="destinatario">
                 <?php mostrar_jesuitas(); ?>
             </select>
 
             <p>Quiero agradecerte</p>
-            <textarea placeholder="Escribe aquí tu mensaje de agradecimiento"></textarea>
+            <textarea placeholder="Escribe aquí tu mensaje de agradecimiento" name="mensaje"></textarea>
             
             <br><br>
             <input type="submit" value="Enviar" class="info">

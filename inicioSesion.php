@@ -35,9 +35,14 @@
         // Si los datos introducidos son iguales al SELECT de la fila, entonces es exitoso
         echo 'Inicio de sesión exitoso';
         
+        // Guarda idAlumno en SESSION para identificar al usuario en las demás páginas
         $fila = $resultado->fetch_array();
-        $_SESSION['alumno'] = $fila['idAlumno'];
-        echo '<p>Hola Alumno ' . $_SESSION['alumno'] . '</p>';
+        $_SESSION['id'] = $fila['idAlumno'];
+
+        echo '<p>Hola Alumno ' . $_SESSION['id'] . '</p>';
+
+        // Redirige a agredecer.php
+        header("Location: agradecer.php");
     }
     
     // Si no, entonces los datos son incorrectos.
