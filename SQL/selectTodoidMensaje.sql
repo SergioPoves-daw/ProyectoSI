@@ -1,0 +1,1 @@
+SELECT * FROM mensajes 	WHERE idMensaje = 1;

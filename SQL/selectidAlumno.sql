@@ -1,0 +1,1 @@
+SELECT nombreJesuita, descripcionJesuita FROM alumnos WHERE idAlumno = 1;
