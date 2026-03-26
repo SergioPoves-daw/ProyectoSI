@@ -10,7 +10,7 @@
     function mostrar_jesuitas() {
         $conexion = conectar();
 
-        $sql = 'SELECT idAlumno, nombreJesuita FROM alumnos';
+        $sql = 'SELECT equipo, nombreJesuita FROM alumnos';
         $resultado = $conexion->query($sql);
 
         // Mostrar nombreJesuita tantos option como filas hayan
@@ -19,7 +19,7 @@
         // Cuando es final de puntero y no hay más filas, devuelve false
         while ($fila = $resultado->fetch_array()) {
             // Primero el option value con el valor del nombreJesuita, después el texto con el mismo valor y por ultimo </option>
-            echo '<option value="' . $fila["idAlumno"] . '">' . $fila["nombreJesuita"] . '</option>';
+            echo '<option value="' . $fila["equipo"] . '">' . $fila["nombreJesuita"] . '</option>';
         }
         // Cuando no hay siguiente fila, devuelve false y acaba el bucle
 

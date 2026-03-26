@@ -15,7 +15,7 @@
     $receptor = $_POST['destinatario'];
     $mensaje = $_POST['mensaje'];
 
-    $sql = 'INSERT INTO mensajes (idEmisor, idReceptor, mensaje) VALUES (' . $emisor . ',' . $receptor . ',' . "'$mensaje'" . ');';
+    $sql = "INSERT INTO agradecimientos (idEmisor, idReceptor, mensaje) VALUES ('" . $emisor . "','" . $receptor . "','" . $mensaje . "'" . ");";
 
     echo $sql;
     echo '<br/>';

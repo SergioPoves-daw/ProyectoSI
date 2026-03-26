@@ -17,8 +17,8 @@
     $password = $_POST["password"];
 
     // Recoger idAlumno si al comprobar la informacion, esta es correcta en la BD
-    $sql = 'SELECT idAlumno FROM alumnos WHERE
-        nombre="' . $nombre . '" AND pwd="' . $password . '";';
+    $sql = 'SELECT equipo FROM alumnos WHERE
+        usuario="' . $nombre . '" AND password="' . $password . '";';
 
     // Comprobar la consulta SQL que se ha hecho
     echo $sql;
@@ -37,7 +37,7 @@
         
         // Guarda idAlumno en SESSION para identificar al usuario en las demás páginas
         $fila = $resultado->fetch_array();
-        $_SESSION['id'] = $fila['idAlumno'];
+        $_SESSION['id'] = $fila['equipo'];
 
         echo '<p>Hola Alumno ' . $_SESSION['id'] . '</p>';
 
