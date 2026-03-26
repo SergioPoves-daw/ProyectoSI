@@ -1,1 +1,1 @@
-SELECT nombreJesuita, descripcionJesuita FROM alumnos WHERE idAlumno = 1;
+SELECT nombreJesuita, infoJesuita FROM alumnos WHERE equipo = '01';

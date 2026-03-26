@@ -1,1 +1,1 @@
-SELECT * FROM mensajes 	WHERE idMensaje = 1;
+SELECT * FROM agradecimientos WHERE idAgradecimiento = 1;
